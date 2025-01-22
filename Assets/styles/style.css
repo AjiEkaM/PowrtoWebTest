@@ -53,17 +53,23 @@ nav a:hover {
 }
 main {
   display: flex;
-  align-items: center;
-  width: 100%;
+  justify-content: space-between; 
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem;
+  flex: 1;
 }
 #content {
-  display: flex;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 65%;
   margin-top: 15rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
 }
 
 #content h1 {
@@ -77,24 +83,24 @@ main {
 }
 #aboutMe {
   width: 70%;
+  grid-column: 1 / 2;
 }
 #hobbies {
   width: 70%;
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 aside {
   display: flex;
-  position: absolute;
-  right: 10%;
-  top: 30%;
   flex-direction: column;
   align-items: center;
-  width: 350px;
+  max-width: 350px;
   border-radius: 5rem 0 5rem 0;
   height: 50vh;
+  margin: 10rem 5rem 0 0;
   background-color: #4a628a;
   color: #dff2eb;
   box-shadow: 10px 10px black;
+  grid-column: 2 / 3;
 }
 aside img {
   width: 100px;
@@ -112,6 +118,7 @@ aside img {
 #skills {
   margin-top: 15rem;
   width: 70%;
+  grid-column: 1 / 2;
 }
 
 footer {
@@ -157,10 +164,27 @@ footer h1 {
 }
 
 @media screen and (max-width: 1200px) {
-  aside {
-    right: 5%;
+  #content {
+    display: flex;
+    flex-direction: column;
   }
-}
+
+  aside {
+    order: 2;
+    margin-top: 1rem;
+  }
+
+  #aboutMe {
+    order: 1;
+  }
+
+  #hobbies,
+  #skills {
+    order: 3;
+    margin-top: 2rem;
+  }
+} 
+
 
 @media screen and (max-width: 895px) {
   aside {
@@ -170,9 +194,7 @@ footer h1 {
   #content {
     width: 100%;
   }
-  #hobbies {
-    margin-top: 40rem;
-  }
+
 }
 
 @media screen and (max-width: 768px) {
