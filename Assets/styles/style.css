@@ -65,7 +65,6 @@ main {
   align-items: center;
   justify-content: center;
   width: 65%;
-  margin-top: 15rem;
   flex: 1;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -172,6 +171,7 @@ footer h1 {
   aside {
     order: 2;
     margin-top: 1rem;
+    width: 20rem;
   }
 
   #aboutMe {
