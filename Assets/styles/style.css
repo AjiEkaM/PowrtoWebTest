@@ -185,6 +185,10 @@ footer h1 {
     order: 3;
     margin-top: 2rem;
   }
+
+  #card img{
+    width: 250px;
+  }
 }
 
 @media screen and (max-width: 895px) {
